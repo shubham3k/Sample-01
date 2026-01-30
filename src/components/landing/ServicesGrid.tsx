@@ -73,11 +73,11 @@ const ServicesGrid = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-primary font-semibold mb-4">OUR SERVICES</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <span className="inline-block text-primary font-semibold mb-4 tracking-wide text-sm">OUR SERVICES</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
             Comprehensive Debt Recovery Solutions
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             End-to-end collection services tailored to your portfolio needs, 
             from gentle reminders to complete legal support.
           </p>
@@ -89,26 +89,26 @@ const ServicesGrid = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group bg-card rounded-xl p-8 card-shadow hover:card-shadow-hover transition-all duration-300 border border-border hover:border-primary/20"
+              className="group bg-card rounded-xl p-8 card-elevated hover:card-elevated-hover transition-all duration-300 border border-border hover:border-primary/30"
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
                 <service.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-muted-foreground mb-5 leading-relaxed">
                 {service.description}
               </p>
               <a 
                 href="#contact" 
-                className="inline-flex items-center text-primary font-medium hover:gap-2 transition-all group-hover:underline"
+                className="inline-flex items-center text-primary font-medium text-sm hover:gap-2 transition-all group-hover:underline"
               >
                 Learn more
                 <ArrowRight className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />

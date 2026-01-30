@@ -37,7 +37,7 @@ const industries = [
 
 const IndustriesServed = () => {
   return (
-    <section id="industries" className="section-padding bg-navy">
+    <section id="industries" className="section-padding bg-charcoal">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -47,11 +47,11 @@ const IndustriesServed = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-trust font-semibold mb-4">INDUSTRIES WE SERVE</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-foreground mb-6">
+          <span className="inline-block text-primary font-semibold mb-4 tracking-wide text-sm">INDUSTRIES WE SERVE</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-6 tracking-tight">
             Trusted Across the Financial Sector
           </h2>
-          <p className="text-navy-foreground/70 text-lg max-w-2xl mx-auto">
+          <p className="text-cream/70 text-lg max-w-2xl mx-auto leading-relaxed">
             We partner with leading financial institutions across India, 
             delivering consistent results across diverse portfolio types.
           </p>
@@ -63,7 +63,7 @@ const IndustriesServed = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-3 lg:grid-cols-5 gap-6"
+          className="grid md:grid-cols-3 lg:grid-cols-5 gap-5"
         >
           {industries.map((industry, index) => (
             <motion.div
@@ -72,15 +72,15 @@ const IndustriesServed = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-navy-foreground/5 border border-navy-foreground/10 rounded-xl p-6 text-center hover:bg-navy-foreground/10 transition-all group"
+              className="bg-cream/5 border border-cream/10 rounded-xl p-6 text-center hover:bg-cream/10 hover:border-cream/20 transition-all group"
             >
-              <div className="w-14 h-14 bg-trust/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-trust group-hover:scale-110 transition-all duration-300">
-                <industry.icon className="h-7 w-7 text-trust group-hover:text-navy" />
+              <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                <industry.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="text-lg font-semibold text-navy-foreground mb-2">
+              <h3 className="text-base font-semibold text-cream mb-2">
                 {industry.title}
               </h3>
-              <p className="text-sm text-navy-foreground/60">
+              <p className="text-sm text-cream/60 leading-relaxed">
                 {industry.description}
               </p>
             </motion.div>
@@ -93,12 +93,12 @@ const IndustriesServed = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-20 text-center"
         >
-          <p className="text-navy-foreground/50 text-sm mb-8">TRUSTED BY LEADING INSTITUTIONS</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-50">
+          <p className="text-cream/40 text-sm mb-8 tracking-wide font-medium">TRUSTED BY LEADING INSTITUTIONS</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {["Partner Bank 1", "Partner Bank 2", "Partner NBFC", "Partner Fintech", "Partner Finance"].map((name, index) => (
-              <div key={index} className="text-navy-foreground/40 font-semibold text-lg">
+              <div key={index} className="text-cream/30 font-semibold text-lg hover:text-cream/50 transition-colors">
                 {name}
               </div>
             ))}

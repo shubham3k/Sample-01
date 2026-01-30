@@ -39,7 +39,7 @@ const testimonials = [
 
 const TrustIndicators = () => {
   return (
-    <section className="section-padding bg-light-blue">
+    <section className="section-padding bg-cream">
       <div className="container mx-auto px-4">
         {/* Certifications */}
         <motion.div
@@ -49,8 +49,8 @@ const TrustIndicators = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-primary font-semibold mb-4">TRUST & COMPLIANCE</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <span className="inline-block text-primary font-semibold mb-4 tracking-wide text-sm">TRUST & COMPLIANCE</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
             Certified. Compliant. Trusted.
           </h2>
         </motion.div>
@@ -60,7 +60,7 @@ const TrustIndicators = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-24"
         >
           {certifications.map((cert, index) => (
             <motion.div
@@ -69,13 +69,13 @@ const TrustIndicators = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-card rounded-xl p-6 card-shadow text-center border border-border"
+              className="bg-card rounded-xl p-6 card-elevated text-center border border-border hover:border-primary/30 transition-all group"
             >
-              <div className="w-14 h-14 bg-trust/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <cert.icon className="h-7 w-7 text-trust" />
+              <div className="w-14 h-14 bg-sage/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-sage transition-colors">
+                <cert.icon className="h-7 w-7 text-charcoal group-hover:text-charcoal transition-colors" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">{cert.title}</h3>
-              <p className="text-sm text-muted-foreground">{cert.description}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{cert.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -88,12 +88,12 @@ const TrustIndicators = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
             What Our Partners Say
           </h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -101,9 +101,9 @@ const TrustIndicators = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-xl p-8 card-shadow border border-border relative"
+              className="bg-card rounded-xl p-8 card-elevated border border-border relative"
             >
-              <Quote className="absolute top-6 left-6 h-8 w-8 text-primary/20" />
+              <Quote className="absolute top-6 left-6 h-8 w-8 text-primary/15" />
               <p className="text-foreground mb-6 italic leading-relaxed relative z-10 pt-4">
                 "{testimonial.quote}"
               </p>

@@ -62,10 +62,7 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: FormData) => {
-    // In production, this would send to an API endpoint
     console.log("Form submitted:", data);
-    
-    // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
     setIsSubmitted(true);
@@ -82,19 +79,19 @@ const ContactForm = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="max-w-xl mx-auto text-center bg-card rounded-2xl p-12 card-shadow border border-border"
+            className="max-w-xl mx-auto text-center bg-card rounded-2xl p-12 card-elevated border border-border"
           >
-            <div className="w-20 h-20 bg-trust/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-10 w-10 text-trust" />
+            <div className="w-20 h-20 bg-sage/30 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="h-10 w-10 text-charcoal" />
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl font-bold text-foreground mb-4 tracking-tight">
               Thank You for Your Interest!
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 leading-relaxed">
               Your request has been received. Our team will review your requirements 
               and contact you within 24 business hours.
             </p>
-            <Button onClick={() => setIsSubmitted(false)}>
+            <Button onClick={() => setIsSubmitted(false)} className="bg-primary hover:bg-crimson-dark">
               Submit Another Request
             </Button>
           </motion.div>
@@ -114,11 +111,11 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block text-primary font-semibold mb-4">CONTACT US</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <span className="inline-block text-primary font-semibold mb-4 tracking-wide text-sm">CONTACT US</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
               Ready to Improve Your Recovery Rates?
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
               Get in touch with our team to discuss your portfolio requirements 
               and discover how we can help maximize your recovery performance.
             </p>
@@ -167,7 +164,7 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-card rounded-2xl p-8 card-shadow border border-border"
+            className="bg-card rounded-2xl p-8 card-elevated border border-border"
           >
             <h3 className="text-xl font-semibold text-foreground mb-6">Request a Consultation</h3>
             
@@ -277,7 +274,7 @@ const ContactForm = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full"
+                  className="w-full bg-primary hover:bg-crimson-dark"
                   disabled={form.formState.isSubmitting}
                 >
                   {form.formState.isSubmitting ? (

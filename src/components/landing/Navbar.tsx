@@ -53,7 +53,8 @@ const Navbar = () => {
               <Building2 className={`h-6 w-6 ${isScrolled ? "text-primary-foreground" : "text-cream"}`} />
             </div>
             <span className={`text-xl font-bold tracking-tight ${isScrolled ? "text-foreground" : "text-cream"}`}>
-              FinServe Pro
+              Call 2 India
+              
             </span>
           </a>
 
